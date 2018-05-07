@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="map" style="width:100%;height:500px"></div>
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(51.508742,-0.120850); 
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var icon = {
+    url: "https://vignette.wikia.nocookie.net/fairytailcouples/images/3/30/Fairy_Tail_Symbol.png/revision/latest?cb=20140203110342.jpg", // url
+    scaledSize: new google.maps.Size(50,50), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0,0) // anchor
+};
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    icon: icon
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbHP7yKqJjyR_glUTxWSyDIGoIKb4WmK8&callback=myMap"></script>
+</body>
+</html>
