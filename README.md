@@ -1,2 +1,2 @@
 # Basic-Google-Maps-Uses
-This repo has a few examples of the google maps API.
+This repo has a few examples of the uses of google maps API.
